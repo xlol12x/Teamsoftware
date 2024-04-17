@@ -3,6 +3,7 @@ pip install opencv-python
 pip install mediapipe
 
 Camera- used doridcam app
+have to have both
 for windows
 https://www.dev47apps.com/droidcam/windows/
 for phone 
