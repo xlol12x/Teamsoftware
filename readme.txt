@@ -16,6 +16,8 @@ open hand presses w
 closed hand presses s
 right side of screen (over x of 600) presses d 
 left side of screen (under x of 400) presses a
+can combine hand gesture and position to move forward and left (for example)
+
 
 wrist location being used for x position 
 
