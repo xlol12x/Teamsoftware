@@ -24,6 +24,15 @@ print(labels)
 #use 720p 
 cap = cv2.VideoCapture(0)
 
+#for tracking pressed button
+w_pressed = False
+a_pressed = False
+s_pressed = False
+d_pressed = False
+q_pressed = False
+e_pressed = False
+r_pressed = False
+
 #recognizes gesture 
 def gesture_recognition(landmarks):
     prediction = model.predict([landmarks])
@@ -36,6 +45,9 @@ def gesture_recognition(landmarks):
 #presses passed key on keyboard 
 def press_key(key):
     keyboard.press(key)
+
+#releases passed key on keyboard
+def release_key(key):
     keyboard.release(key)
 
 #list to store hand labels/gestures
@@ -134,27 +146,57 @@ while True:
     cv2.imshow("Hand Tracking", frm)
 
     #button presses on hand position 
-    if central_lm_x > 125:
+    if central_lm_x > 125 and d_pressed == False:
         press_key('d')
-    if central_lm_x < -125:
+        d_pressed = True
+    if central_lm_x < -125 and a_pressed == False:
         press_key('a')
-    if central_lm_y > 125:
+        a_pressed = True
+    if central_lm_y > 125 and w_pressed == False:
         press_key('w')
-    if central_lm_y < -125:
+        w_pressed = True
+    if central_lm_y < -125 and s_pressed == False:
         press_key('s')
+        s_pressed = True
+
+    #button releases on hand position
+    if central_lm_x < 125 and d_pressed == True:
+        release_key('d')
+        d_pressed = False
+    if central_lm_x > -125 and a_pressed == True:
+        release_key('a')
+        a_pressed = False
+    if central_lm_y < 125 and w_pressed == True:
+        release_key('w')
+        w_pressed = False
+    if central_lm_y > -125 and s_pressed == True:
+        release_key('s')
+        s_pressed = False
         
-
-    #button presses on gestures 
-    if right_gesture_name == 'Fist' or right_gesture_name == 'Rock':
+    #button presses on gestures
+    if right_gesture_name == 'Fist' and r_pressed == False:
         press_key('r')
-
-    if left_gesture_name == 'Fist':
+        r_pressed = True
+    if left_gesture_name == 'Fist' and q_pressed == False:
         press_key('q')
-
-    if left_gesture_name == 'Call me':
+        q_pressed = True
+    if left_gesture_name == 'Call me' and e_pressed == False:
         press_key('e')
+        e_pressed = True
 
-    if cv2.waitKey(1) == ord('q'):
+    #button releases on gestures
+    if right_gesture_name != 'Fist' and r_pressed == True:
+        release_key('r')
+        r_pressed = False
+    if  left_gesture_name != 'Fist' and q_pressed == True:
+        release_key('q')
+        q_pressed = False
+    if left_gesture_name != 'Call me' and e_pressed == True:
+        release_key('e')
+        e_pressed = False
+
+    #close window if press p 
+    if cv2.waitKey(1) == ord('p'):
         cap.release()
         cv2.destroyAllWindows()
         break
