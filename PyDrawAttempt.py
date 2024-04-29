@@ -170,7 +170,7 @@ while True:
     if left_gesture_name == 'Call me':
         press_key('r')
 
-    if cv2.waitKey(1) == ord('q'):
+    if cv2.waitKey(1) == ord('`'):
         cap.release()
         cv2.destroyAllWindows()
         break
