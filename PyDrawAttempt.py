@@ -88,12 +88,12 @@ while True:
                                 draw.DrawingSpec(color=(0, 255, 0), thickness=2, circle_radius=2))
             
 
-           # for idx, landmark in enumerate(hand_landmarks.landmark):
-           #     if idx == 9:  # Replace YOUR_SPECIFIC_LANDMARK_INDEX with the index of the landmark you want to draw
-           #         lmx = int(landmark.x * x)
-           #         lmy = int(landmark.y * y)
-           #         cv2.circle(frm, (lmx, lmy), 4, (255, 0, 0), -1)  # Draw the landmark with color (255, 0, 0) (red)
-           #         break  # Break the loop once the specific landmark is drawn
+            for idx, landmark in enumerate(hand_landmarks.landmark):
+                if idx == 9:  # Replace YOUR_SPECIFIC_LANDMARK_INDEX with the index of the landmark you want to draw
+                    lmx = int(landmark.x * x)
+                    lmy = int(landmark.y * y)
+                    cv2.circle(frm, (lmx, lmy), 4, (255, 0, 0), -1)  # Draw the landmark with color (255, 0, 0) (red)
+                    break  # Break the loop once the specific landmark is drawn
             
 
             landmarks = []  # Initialize landmarks list  
