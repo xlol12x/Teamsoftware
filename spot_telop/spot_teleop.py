@@ -3,7 +3,7 @@
 
 from __future__ import print_function
 
-import roslib; roslib.load_manifest('champ_teleop')
+import roslib; roslib.load_manifest('spot_teleop') #
 import rospy
 
 from sensor_msgs.msg import Joy
@@ -49,12 +49,12 @@ CTRL-C to quit
         self.velocityBindings = {
 		#normal
 		'u':(1,0,0,1), #forward and left
-                'i':(1,0,0,0), #forward
+                'i':(1,0,0,0), #forward 
                 'o':(1,0,0,-1), #forward and right
-                'j':(0,0,0,1), #turn left
-                'l':(0,0,0,-1), #turn right
+                'j':(0,0,0,1), #turn left 
+                'l':(0,0,0,-1), #turn right 
 		'm':(-1,0,0,-1), #backwards and left
-                ',':(-1,0,0,0), #backwards
+                ',':(-1,0,0,0), #backwards 
                 '.':(-1,0,0,1), #backwards and right
                 
 		#strafing
@@ -132,18 +132,16 @@ CTRL-C to quit
                 if key in self.velocityBindings.keys():
                     x = self.velocityBindings[key][0]
                     y = self.velocityBindings[key][1]
-                    z = self.velocityBindings[key][2]
-                    th = self.velocityBindings[key][3]
-                    
-                    if cmd_attempts > 1:
-                        twist = Twist()
-                        twist.linear.x = x *self.speed
-                        twist.linear.y = y * self.speed
-                        twist.linear.z = z * self.speed
-                        twist.angular.x = 0
-                        twist.angular.y = 0
-                        twist.angular.z = th * self.turn
-                        self.velocity_publisher.publish(twist)
+                    z = self.velocityBindings[key][2] 
+                    th = self.velocityBindings[key][3]  
+                    twist = Twist()
+                    twist.linear.x = x *self.speed
+                    twist.linear.y = y * self.speed
+                    twist.linear.z = z * self.speed
+                    twist.angular.x = 0
+                    twist.angular.y = 0
+                    twist.angular.z = th * self.turn
+                    self.velocity_publisher.publish(twist)
 
                     cmd_attempts += 1
                     
@@ -193,5 +191,5 @@ CTRL-C to quit
         return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 
 if __name__ == "__main__":
-    rospy.init_node('champ_teleop')
+    rospy.init_node('spot_teleop')
     teleop = Teleop()
