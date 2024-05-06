@@ -1,8 +1,0 @@
-#!/usr/bin/expect
-
-spawn apt-get install kbd -y
-expect "Keyboard layout:\r"
-send -- "1\r"
-expect "Character set to support:\r"
-send -- "1\r"
-expect eof
