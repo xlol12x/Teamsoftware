@@ -4,6 +4,8 @@ mediapipe
 tensorflow[and-cuda]
 pynput
 
+Image on docker hub (linux only): https://hub.docker.com/repository/docker/bahtes/gestures-to-keypress
+
 720p camera for best experience
 reccomend camo
 https://reincubate.com/camo/
