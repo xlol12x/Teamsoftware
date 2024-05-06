@@ -9,9 +9,6 @@ from pynput.keyboard import Key, Controller
 import vgamepad as vg
 
 
-#tidy up the code 
-
-
 #class for app
 class App:
     def __init__(self, window, window_title):
