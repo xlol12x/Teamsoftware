@@ -1,0 +1,24 @@
+Setup (needs to be ran in all terminals before using):
+
+source ros_ws/devel/setup.bash
+
+
+
+Autonomous navigation:
+
+roslaunch spot_config gazebo.launch
+roslaunch spot_config navigate.launch rviz:=true
+
+
+
+Keyboard movement:
+
+roslaunch spot_config gazebo.launch
+roslaunch spot_teleop teleop.launch
+
+
+Launch gestures (within /home/ubuntu/Desktop/Teamsoftware-main):
+
+
+xhost +local:docker
+sudo docker run -it --device /dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY  py-cam
