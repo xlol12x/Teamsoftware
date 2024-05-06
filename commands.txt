@@ -1,4 +1,4 @@
-Setup (needs to be ran in all terminals before using ros):
+Setup (needs to be ran in all terminals before using):
 
 source ros_ws/devel/setup.bash
 
@@ -21,4 +21,4 @@ Launch gestures (within /home/ubuntu/Desktop/Teamsoftware-main):
 
 
 xhost +local:docker
-sudo docker run -it --device /dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY bahtes/gestures-to-keypress
+sudo docker run -it --device /dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY  py-cam

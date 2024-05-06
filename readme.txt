@@ -1,8 +1,9 @@
-if using just python version 3.11 (like no visual studio code)
-pip install opencv-python
-pip install mediapipe
-pip install tensorflow[and-cuda]
-pip install gamepad (for 360 controller)
+Requirements:
+opencv-python
+mediapipe
+tensorflow[and-cuda]
+pynput
+gamepad (for 360 controller)
 
 720p camera for best experience
 reccomend camo
