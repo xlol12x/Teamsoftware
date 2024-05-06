@@ -17,7 +17,7 @@ roslaunch spot_config gazebo.launch
 roslaunch spot_teleop teleop.launch
 
 
-Launch gestures (within /home/ubuntu/Desktop/Teamsoftware-main):
+Launch gestures:
 
 
 xhost +local:docker
