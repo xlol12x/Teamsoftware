@@ -1,4 +1,4 @@
-Requirements:
+Windows Requirements:
 opencv-python
 mediapipe
 tensorflow[and-cuda]
