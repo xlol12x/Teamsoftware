@@ -6,6 +6,7 @@ import mediapipe as mp
 import numpy as np
 from tensorflow.keras.models import load_model
 from pynput.keyboard import Key, Controller
+import vgamepad as vg
 
 
 #tidy up the code 
@@ -22,6 +23,16 @@ class App:
 
         #for keypresses
         self.keyboard = Controller()
+
+        #for joystick controls
+        #emulating an xbox 360 controller 
+        self.gamepad = vg.VX360Gamepad()
+
+        #indicates if a button is pressed (for controller)
+        self.x_button_pressed = False
+        self.y_button_pressed = False
+        self.a_button_pressed = False
+        self.b_button_pressed = False
 
         # Load the gesture recognition model
         self.model = load_model('gestures')
@@ -69,7 +80,7 @@ class App:
         self.config_canvas2 = tk.Canvas(self.notebook, bg="white", width=395, height=430, highlightthickness=0)
         self.config_canvas2.pack()
         self.config_canvas2.pack_propagate(0)
-        self.notebook.add(self.config_canvas2, text="Controller(Windows only)")
+        self.notebook.add(self.config_canvas2, text="Controller")
 
         # Draw a line between the two canvases
         self.draw_separator()
@@ -79,6 +90,9 @@ class App:
 
         #inputs for keyboard config
         self.keyboard_config()
+
+        #labels for controller config
+        self.controller_config()
         
         #buffer label
         self.top_buffer_label = tk.Label(self.window, text="", font=("Arial", 12),bg = "white")
@@ -213,7 +227,7 @@ class App:
         instruction_title_label = tk.Label(self.instruction_canvas, text="Instructions", font=("Arial", 16, "bold underline"), bg="white")
         instruction_title_label.pack(anchor="w", padx=10, pady=10)
 
-        instructions_label1 = tk.Label(self.instruction_canvas, text="Choose input method, either keyboard or controller(only supported on windows).", font=("Arial", 12), bg="white")
+        instructions_label1 = tk.Label(self.instruction_canvas, text="Choose input method, either keyboard or controller.", font=("Arial", 12), bg="white")
         instructions_label2 = tk.Label(self.instruction_canvas, text="Select what the gestures input, or use default values.", font=("Arial", 12), bg="white")
         instructions_label3 = tk.Label(self.instruction_canvas, text="When ready, press start to begin video capture.", font=("Arial", 12), bg="white")
         instructions_label4 = tk.Label(self.instruction_canvas, text="Hands must be on correct sides of the green line.", font=("Arial", 12), bg="white")
@@ -263,6 +277,21 @@ class App:
         entry.insert(0, default_value)
         entry.pack(anchor=tk.CENTER)
         return label, entry
+
+    #labels for controller config (no button customisation here just what does what is stated)
+    #customisation feels redundant
+    def controller_config(self):
+        controller_label1 = tk.Label(self.config_canvas2, text="Joystick control based on hand position", font=("Arial", 12), bg="white")
+        controller_label2 = tk.Label(self.config_canvas2, text="Right fist: X button", font=("Arial", 12), bg="white")
+        controller_label3 = tk.Label(self.config_canvas2, text="Right call: B button", font=("Arial", 12), bg="white")
+        controller_label4 = tk.Label(self.config_canvas2, text="Left fist: Y button", font=("Arial", 12), bg="white")
+        controller_label5 = tk.Label(self.config_canvas2, text="Left call: A button", font=("Arial", 12), bg="white")
+
+        controller_label1.pack(anchor=tk.CENTER,pady=(20,0))
+        controller_label2.pack(anchor=tk.CENTER)
+        controller_label3.pack(anchor=tk.CENTER)
+        controller_label4.pack(anchor=tk.CENTER)
+        controller_label5.pack(anchor=tk.CENTER)
 
     #update self
     def update(self):
@@ -317,13 +346,6 @@ class App:
                         self.draw.draw_landmarks(frm, hand_landmarks, self.hands.HAND_CONNECTIONS,
                                                 self.draw.DrawingSpec(color=(255, 0, 0), thickness=2, circle_radius=4),
                                                 self.draw.DrawingSpec(color=(0, 255, 0), thickness=2, circle_radius=2))
-
-                        for idx, landmark in enumerate(hand_landmarks.landmark):
-                            if idx == 9:  # Replace YOUR_SPECIFIC_LANDMARK_INDEX with the index of the landmark you want to draw
-                                lmx = int(landmark.x * x)
-                                lmy = int(landmark.y * y)
-                                cv2.circle(frm, (lmx, lmy), 4, (255, 0, 0), -1)  # Draw the landmark with color (255, 0, 0) (red)
-                                break  # Break the loop once the specific landmark is drawn
                             
                         landmarks = []  # Initialize landmarks list
                         for lm in hand_landmarks.landmark:
@@ -407,8 +429,30 @@ class App:
                         elif central_lm_y < -square_size/2:
                             self.press_key(self.backward_key)
                             vertical_output = self.backward_key
+
+                    if active_tab_text == "Controller":
+                        #joystick controls
+                        #scale coordinates to control stick 
+                        gamepad_x = central_lm_x * 130
+                        gamepad_y = central_lm_y * 150
+
+                        if gamepad_x > 32767:
+                            gamepad_x = 32767
+                        elif gamepad_x < -32768:
+                            gamepad_x = -32768
+
+                        if gamepad_y > 32767:
+                            gamepad_y = 32767
+                        elif gamepad_y < -32768:
+                            gamepad_y = -32768
+                    
+                        self.gamepad.left_joystick(x_value= gamepad_x, y_value= gamepad_y)  # values between -32768 and 32767
+                        self.gamepad.update()
+
+                        horizontal_output = gamepad_y
+                        vertical_output = gamepad_x
                       
-                #button presses on gestures
+                #button presses on gestures (keyboard and controller version
                 if active_tab_text == "Keyboard":
                     if right_gesture_name == 'Fist':
                         self.press_key(self.right_fist_key)
@@ -416,14 +460,53 @@ class App:
                     elif right_gesture_name == 'Call me':
                         self.press_key(self.right_call_key)
                         right_output = self.right_call_key
-      
+            
                     if left_gesture_name == 'Fist':
                         self.press_key(self.left_fist_key)
                         left_output = self.left_fist_key
                     elif left_gesture_name == 'Call me':
                         self.press_key(self.left_call_key)
                         left_output = self.left_call_key
+                        
+                elif active_tab_text == "Controller":
+                    if right_gesture_name == 'Fist' and not self.x_button_pressed:
+                        self.gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
+                        self.x_button_pressed = True
+                    elif right_gesture_name != 'Fist' and self.x_button_pressed:
+                        self.gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
+                        self.x_button_pressed = False
 
+                    if right_gesture_name == 'Call me' and not self.b_button_pressed:
+                        self.gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+                        self.b_button_pressed = True
+                    elif right_gesture_name != 'Call me' and self.b_button_pressed:
+                        self.gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+                        self.b_button_pressed = False
+
+                    if left_gesture_name == 'Fist' and not self.y_button_pressed:
+                        self.gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_Y)
+                        self.y_button_pressed = True
+                    elif left_gesture_name != 'Fist'and self.y_button_pressed:
+                        self.gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_Y)
+                        self.y_button_pressed = False
+                    if left_gesture_name == 'Call me' and not self.a_button_pressed:
+                        self.gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+                        self.a_button_pressed = True
+                    elif left_gesture_name != 'Call me' and self.a_button_pressed:
+                        self.gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+                        self.a_button_pressed = False
+
+                    self.gamepad.update()
+
+                    #for output
+                    if self.x_button_pressed == True:
+                        right_output = "X Button"
+                    if self.b_button_pressed == True:
+                        right_output = "B Button"
+                    if self.y_button_pressed == True:
+                        left_output = "Y Button"
+                    if self.a_button_pressed == True:
+                        left_output = "A Button"
                         
                 #update output info
                 self.right_hand_output_label.configure(text = f"Right Gesture Output: {right_output}")
