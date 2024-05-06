@@ -5,10 +5,7 @@ from PIL import Image, ImageTk
 import mediapipe as mp
 import numpy as np
 from tensorflow.keras.models import load_model
-from pynput.keyboard import Key, Controller
-
-
-#tidy up the code 
+from pynput.keyboard import Key, Controller 
 
 
 #class for app
