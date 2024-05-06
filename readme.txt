@@ -6,8 +6,15 @@ pynput
 
 Image on docker hub (linux only): https://hub.docker.com/repository/docker/bahtes/gestures-to-keypress
 
+To run docker image:
+
+xhost +local:docker
+sudo docker run -it --device /dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY bahtes/gestures-to-keypress
+
+(camera needed to change between webcams change "/dev/video0:/dev/video0" to the corrosponding device)
+
 720p camera for best experience
-reccomend camo
+reccomend camo if no webcam present
 https://reincubate.com/camo/
 
 for controls:
