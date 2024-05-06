@@ -3,6 +3,8 @@ opencv-python
 mediapipe
 tensorflow[and-cuda]
 pynput
+ROS Melodic (Ubuntu 18.04) {for robot simulation}
+Champ_msgs ROS Packages {for robot simulation}
 
 Image on docker hub (linux only): https://hub.docker.com/repository/docker/bahtes/gestures-to-keypress
 
