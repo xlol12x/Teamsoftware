@@ -1,4 +1,4 @@
-Requirements:
+Linux Requirements:
 opencv-python
 mediapipe
 tensorflow[and-cuda]
