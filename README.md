@@ -8,14 +8,7 @@
   <p align="center">
     A program to convert gestures into keypresses
     <br />
-    <a href="https://github.com/max-hill-4/uni-twitter-analysis"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="http://teamsoftware.max-hill-4.xyz/">View Demo</a>
-    ·
-    <a href="https://github.com/max-hill-4/uni-twitter-analysis/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/max-hill-4/uni-twitter-analysis/issues">Request Feature</a>
   </p>
 </div>
 
