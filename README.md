@@ -29,6 +29,7 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 ### Installation
 
 For linux the below docker image is suggested, for windows view the windows branch
+
 [![docker][docker]][docker-url]
 
 
