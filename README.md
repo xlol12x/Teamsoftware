@@ -95,5 +95,5 @@ Alfie Wheeler
 [mediapipe]: https://img.shields.io/badge/Mediapipe-1e90ff?style=for-the-badge&logoColor=White
 [mediapipe-url]: https://developers.google.com/mediapipe
 
-[windows]: https://img.shields.io/badge/Windows%20-%20%0078d4?style=for-the-badge&logo=windows&logoColor=white
+[windows]: https://img.shields.io/badge/Windows-0078d4?style=for-the-badge&logo=windows&logoColor=white
 [windows-url]: https://www.microsoft.com/en-gb/windows
