@@ -9,9 +9,6 @@
     A program to convert gestures into keypresses
     <br />
   </p>
-</div>
-
-[![ROS][ROS]][ROS-url]
 
 
 
