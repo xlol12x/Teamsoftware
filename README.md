@@ -38,6 +38,8 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 ## Installation
 
+[![windows][windows]][windows-url]
+
 For Windows it is recommended to clone this branch, download the requirements, see `requirements.txt` and run the python file `hand-signs.py`. For Linux see the main branch.
 
 
@@ -92,3 +94,6 @@ Alfie Wheeler
 
 [mediapipe]: https://img.shields.io/badge/Mediapipe-1e90ff?style=for-the-badge&logoColor=White
 [mediapipe-url]: https://developers.google.com/mediapipe
+
+[windows]: https://img.shields.io/badge/Windows%20-%20%237FBA00?style=for-the-badge&logo=windows&logoColor=white
+[windows-url]: https://www.microsoft.com/en-gb/windows
