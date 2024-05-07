@@ -10,7 +10,7 @@
     <br />
   </p>
 
-<div align="centre">
+<div align="center">
   
   [![youtube][youtube]][youtube-url]
   
