@@ -33,6 +33,8 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 [![ROS][ROS]][ROS-url]
 
+[![Mediapip][Mediapipe]][Mediapipe-url]
+
 
 ## Installation
 
@@ -79,3 +81,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [youtube]: https://img.shields.io/badge/View%20Demo-red?style=for-the-badge&logo=Youtube&logoColor=White
 [youtube-url]: https://youtu.be/sMdeBvYmKsk?si=4Sz1jXiuWLt7q8oO
+
+[mediapipe]: https://img.shields.io/badge/Mediapipe-1e90ff?style=for-the-badge&logoColor=White
+[mediapipe-url]: https://developers.google.com/mediapipe
