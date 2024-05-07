@@ -52,14 +52,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/Contributors-5-blue?style=for-the-badge
-[contributors-url]: https://github.com/max-hill-4/sentiment-tweet-analysis/graphs/contributors
+[contributors-url]: https://github.com/xlol12x/Teamsoftware/graphs/contributors
 
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/
 
-[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Python]: https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
 
-[docker]: https://img.shields.io/badge/docker-3776AB?style=for-the-badge&logo=docker&logoColor=white
+[docker]: https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://hub.docker.com/r/bahtes/gestures-to-keypress
