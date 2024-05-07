@@ -8,7 +8,7 @@
   <p align="center">
     A program to convert gestures into keypresses
     <br />
-    <a href="http://teamsoftware.max-hill-4.xyz/">View Demo</a>
+    <a href="http://teamsoftware.max-hill-4.xyz/](https://youtu.be/sMdeBvYmKsk?si=4Sz1jXiuWLt7q8oO">View Demo</a>
   </p>
 </div>
 
