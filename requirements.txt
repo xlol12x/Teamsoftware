@@ -1,0 +1,6 @@
+opencv-python
+mediapipe
+tensorflow[and-cuda]
+vgamepad
+numpy
+pynput
