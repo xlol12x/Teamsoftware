@@ -4,6 +4,7 @@ mediapipe
 tensorflow[and-cuda]
 pynput
 vgamepad
+numpy
 
 720p camera for best experience
 reccomend camo
