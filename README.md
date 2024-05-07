@@ -8,7 +8,7 @@
   <p align="center">
     A program to convert gestures into keypresses
     <br />
-    <a href="https://youtu.be/sMdeBvYmKsk?si=4Sz1jXiuWLt7q8oO">View Demo</a>
+    <a [![youtube][youtube]][youtube-url] </a>
   </p>
 </div>
 
@@ -72,3 +72,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [ROS]: https://img.shields.io/badge/ROS-navy?style=for-the-badge&logo=ROS&logoColor=white
 [ROS-url]: https://www.ros.org/
+
+[youtube]: https://img.shields.io/badge/View%20Demo-red?style=for-the-badge&logo=Youtube&logoColor=White
+[youtube-url]: https://youtu.be/sMdeBvYmKsk?si=4Sz1jXiuWLt7q8oO
