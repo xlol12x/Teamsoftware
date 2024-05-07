@@ -38,7 +38,7 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 ## Installation
 
-For Windows it is recommended to clone this branch, download the dependencies and run the python file `hand-signs.py`. For Linux see the main branch.
+For Windows it is recommended to clone this branch, download the requirements, see `requirements.txt` and run the python file `hand-signs.py`. For Linux see the main branch.
 
 
 
