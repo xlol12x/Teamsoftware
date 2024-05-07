@@ -3,7 +3,7 @@ opencv-python
 mediapipe
 tensorflow[and-cuda]
 pynput
-gamepad (for 360 controller)
+vgamepad
 
 720p camera for best experience
 reccomend camo
