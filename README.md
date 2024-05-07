@@ -56,7 +56,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/
+[license-url]: https://github.com/bahtes/gestures-to-keypress/blob/main/LICENSE
 
 [Python]: https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
