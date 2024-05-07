@@ -59,5 +59,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
 
-[docker]: 
-[docker-url]: 
+[docker]: https://img.shields.io/badge/docker-blue?style=flat-square&logo=docker&logoColor=white&logoSize=auto
+[docker-url]: https://hub.docker.com/r/bahtes/gestures-to-keypress
