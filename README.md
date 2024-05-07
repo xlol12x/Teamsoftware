@@ -8,7 +8,7 @@
   <p align="center">
     A program to convert gestures into keypresses
     <br />
-    <a [![youtube][youtube]][youtube-url] </a>
+    [![youtube][youtube]][youtube-url]
   </p>
 </div>
 
