@@ -3,10 +3,10 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
-  <h3 align="center">Team Software Project</h3>
+  <h3 align="center">Team Software Engineering Project</h3>
 
   <p align="center">
-    A program to convert gestures into keypresses
+     Visual Dynamics: Streamlining Robotics with Gesture Controls 
     <br />
   </p>
 
