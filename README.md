@@ -38,9 +38,7 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 ## Installation
 
-For linux the below docker image is suggested, for windows view the windows branch.
-
-[![docker][docker]][docker-url]
+For Windows it is recommended to clone this branch, download the dependencies and run the python file `hand-signs.py`. For Linux see the main branch.
 
 
 
