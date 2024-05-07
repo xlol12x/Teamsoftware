@@ -2,16 +2,6 @@
 
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/max-hill-4/uni-twitter-analysis">
-    <img src="https://seeklogo.com/images/T/twitter-icon-square-logo-108D17D373-seeklogo.com.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Team Software Project</h3>
 
