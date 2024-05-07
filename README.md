@@ -59,9 +59,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contributors
 
 Henry Ball
+
 Isaac Bates
+
 Michal Kopec
+
 Charles Webb
+
 Alfie Wheeler
 
 <!-- MARKDOWN LINKS & IMAGES -->
