@@ -17,11 +17,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Project][Project]]
-
 A program used to convert gestures to kepresses or controller inputs. Designed to be used with ROS to control a robot via a teleop script.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -32,22 +28,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![Python][Python]][Python-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
 ### Installation
 
 _Below will be an example of how we want users to interact / begin using our project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -55,10 +38,6 @@ _Below will be an example of how we want users to interact / begin using our pro
 ## Usage
 
 Use this space to show useful examples of how a project can be used. 
-
-_For more examples, please refer to the [Documentation](https://github.com/max-hill-4/uni-twitter-analysis)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
