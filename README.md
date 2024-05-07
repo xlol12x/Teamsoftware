@@ -27,10 +27,12 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 [![tensorflow][tensorflow]][tensorflow-url]
 
+[![ROS][ROS]][ROS-url]
+
 
 ## Installation
 
-For linux the below docker image is suggested, for windows view the windows branch
+For linux the below docker image is suggested, for windows view the windows branch.
 
 [![docker][docker]][docker-url]
 
@@ -38,8 +40,7 @@ For linux the below docker image is suggested, for windows view the windows bran
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. 
+Run the program and have where you would like to input into selected, you can change the keys pressed within the GUI, the start and stop button can pause and resume the inputs and camera.
 
 
 
@@ -68,3 +69,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [docker]: https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://hub.docker.com/r/bahtes/gestures-to-keypress
+
+[ROS]: https://img.shields.io/badge/ROS-navy?style=for-the-badge&logo=ROS&logoColor=white
+[ROS-url]: https://www.ros.org/
