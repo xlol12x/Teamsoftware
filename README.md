@@ -13,10 +13,10 @@
     <img src="https://seeklogo.com/images/T/twitter-icon-square-logo-108D17D373-seeklogo.com.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">2023 Team Software Project</h3>
+  <h3 align="center">Team Software Project</h3>
 
   <p align="center">
-    A Twitter Sentiment Analysis website!
+    A program to convert gestures into keypresses
     <br />
     <a href="https://github.com/max-hill-4/uni-twitter-analysis"><strong>Explore the docs »</strong></a>
     <br />
@@ -47,8 +47,6 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![Python][Python]][Python-url]
-* [![Javascript][Javascript]][Javascript-url]
-* [![Flask][Flask]][Flask-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
