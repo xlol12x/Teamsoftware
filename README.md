@@ -53,7 +53,7 @@ Run the program and have where you would like to input into selected, you can ch
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
