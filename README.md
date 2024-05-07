@@ -25,6 +25,8 @@ A program used to convert gestures to kepresses or controller inputs. Designed t
 
 [![Python][Python]][Python-url]
 
+[![tensorflow][tensorflow]][tensorflow-url]
+
 
 ## Installation
 
@@ -44,7 +46,7 @@ Use this space to show useful examples of how a project can be used.
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
@@ -56,10 +58,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/bahtes/gestures-to-keypress/blob/main/LICENSE
+[license-url]: https://github.com/
 
 [Python]: https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
+
+[tensorflow]: https://img.shields.io/badge/tensorflow-orange?style=for-the-badge&logo=tensorflow&logoColor=white
+[tensorflow-url]: https://www.tensorflow.org/
 
 [docker]: https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://hub.docker.com/r/bahtes/gestures-to-keypress
